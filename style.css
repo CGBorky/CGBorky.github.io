@@ -112,3 +112,62 @@ footer {
   text-align: center;
   padding: 15px 0;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.policy-section h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.policy-section p, .policy-section ul {
+  margin-bottom: 15px;
+}
+
+.policy-section ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #888;
+}
+
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
