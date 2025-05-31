@@ -6,6 +6,7 @@ body, html {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   text-align: center;
+  overflow-y: auto;
 }
 
 header {
@@ -101,73 +102,81 @@ main {
   display: flex;
 }
 
-.contact {
-  margin-bottom: 30px;
+.download-buttons {
+  margin-top: 20px;
 }
 
-.contact h2 {
-  margin-bottom: 15px;
+.chrome-icon {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background-color: #45a049;
 }
 
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
-  position: fixed;
+  padding: 10px 0;
+  position: static; 
   width: 100%;
-  bottom: 0;
+  margin-top: 30px; 
 }
 
 footer a {
   color: #4caf50;
   text-decoration: none;
-  margin-left: 15px;
+  margin: 0 10px;
+  transition: color 0.3s;
+  font-size: 0.85rem;
 }
 
 footer a:hover {
+  color: #66bb6a;
   text-decoration: underline;
 }
-  
-.chrome-icon {
-    width: 24px; 
-    height: auto; 
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow-y: auto;
-    }
 
-    .main-content {
-      min-height: calc(100vh - 100px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+footer .btn {
+  margin: 8px 0;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
+.socials {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
 
-    .btn {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
-    }
+.socials a {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-    .btn:hover {
-      background-color: #45a049;
-    }
+.socials a:hover {
+  color: #4caf50;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
