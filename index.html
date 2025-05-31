@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Calendar - Your Minimalist Event Manager</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calendar - Your Minimalist Event Manager</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <div class="main-content">
-    <header>
-      <div class="header-content">
-        <img src="logo.png" alt="Simple Calendar Logo" class="logo">
-        <div class="header-text">
-          <h1>Simple Calendar</h1>
-          <p>The minimalist event manager that keeps you organized effortlessly.</p>
+<div class="main-content">
+  <header>
+    <div class="header-content">
+      <img src="logo.png" alt="Simple Calendar Logo" class="logo">
+      <div class="header-text">
+        <h1>Simple Calendar</h1>
+        <p>The minimalist event manager that keeps you organized effortlessly.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="screenshots">
+      <h2>See It In Action</h2>
+      <div class="devices">
+        <div class="device-frame" onclick="openFullscreen('screenshot1.png')">
+          <img src="screenshot1.png" alt="Calendar Screenshot">
+        </div>
+        <div class="device-frame" onclick="openFullscreen('screenshot2.png')">
+          <img src="screenshot2.png" alt="Event Popup Screenshot">
+        </div>
+        <div class="device-frame" onclick="openFullscreen('screenshot3.png')">
+          <img src="screenshot3.png" alt="Dark Mode Screenshot">
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="screenshots">
-        <h2>See It In Action</h2>
-        <div class="devices">
-          <div class="device-frame" onclick="openFullscreen('screenshot1.png')">
-            <img src="screenshot1.png" alt="Calendar Screenshot">
-          </div>
-          <div class="device-frame" onclick="openFullscreen('screenshot2.png')">
-            <img src="screenshot2.png" alt="Event Popup Screenshot">
-          </div>
-        </div>
-      </section>
+    <section class="features">
+      <h2>Features & Benefits</h2>
+      <ul>
+        <li>📅 Quick event creation and management</li>
+        <li>🔄 Sync with Google Calendar</li>
+        <li>🌙 Light & Dark mode toggle</li>
+        <li>📍 Hover for event details</li>
+        <li>➕ Add events directly from the calendar view</li>
+      </ul>
+    </section>
 
-     <section class="features">
-        <h2>Features & Benefits</h2>
-        <ul>
-          <li>📅 Quick event creation and management</li>
-          <li>🔄 Sync with Google Calendar</li>
-          <li>🌙 Light & Dark mode toggle</li>
-          <li>📍 Hover for event details</li>
-          <li>➕ Add events directly from the calendar view</li>
-        </ul>
-      </section>
+    <section class="download">
+      <h2>Download & Use</h2>
+      <div class="download-buttons">
+        <a href="https://chromewebstore.google.com/detail/simple-calendar/ddbjaomkaknpbjaaphdocjhoajnkodle" target="_blank" class="btn">
+          <img src="chrome-icon.png" alt="Chrome Icon" class="chrome-icon"> Download for Chrome
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
 
-      <section class="download">
-        <h2>Download & Use</h2>
-        <div class="download-buttons">
-          <a href="https://fileport.io/DMFCYeQHMATd" target="_blank" class="btn">
-            <img src="chrome-icon.png" alt="Chrome Icon" class="chrome-icon"> Download for Chrome
-          </a>
-          <p>(Currently available as a .rar file while Chrome reviews the extension. Once approved, the link will be updated.)</p>
-        </div>
-      </section>
-    </main>
+<footer>
+  <p>© 2025 Simple Calendar. All rights reserved.</p>
+  <a href="mailto:misko.borak@gmail.com" class="btn">Contact the Developer</a>
+  <div class="socials">
+    <a href="https://x.com/simply_calendar" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.tiktok.com/@simplecalendar" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.producthunt.com/products/simple-calendar?launch=simple-calendar" target="_blank"><i class="fab fa-product-hunt"></i></a>
   </div>
+  <a href="privacy.html" target="_blank">Privacy Policy</a>
+</footer>
 
-  <footer>
-    <p>© 2025 Simple Calendar. All rights reserved.</p>
-    <a href="mailto:misko.borak@gmail.com" class="btn">Contact the Developer</a>
-    <br>
-    <a href="privacy.html" target="_blank">Privacy Policy</a>
-  </footer>
+<div class="fullscreen-overlay" id="fullscreen-overlay" onclick="closeFullscreen()">
+  <img id="fullscreen-image" src="" alt="Fullscreen Image">
+</div>
 
-  <div class="fullscreen-overlay" id="fullscreen-overlay" onclick="closeFullscreen()">
-    <img id="fullscreen-image" src="" alt="Fullscreen Image">
-  </div>
+<script>
+function openFullscreen(imageSrc) {
+  const overlay = document.getElementById("fullscreen-overlay");
+  const fullscreenImg = document.getElementById("fullscreen-image");
+  fullscreenImg.src = imageSrc;
+  overlay.classList.add("active");
+}
 
-  <script>
-    function openFullscreen(imageSrc) {
-      const overlay = document.getElementById("fullscreen-overlay");
-      const fullscreenImg = document.getElementById("fullscreen-image");
-      fullscreenImg.src = imageSrc;
-      overlay.classList.add("active");
-    }
-
-    function closeFullscreen() {
-      const overlay = document.getElementById("fullscreen-overlay");
-      overlay.classList.remove("active");
-    }
-  </script>
+function closeFullscreen() {
+  const overlay = document.getElementById("fullscreen-overlay");
+  overlay.classList.remove("active");
+}
+</script>
 
 </body>
 </html>
