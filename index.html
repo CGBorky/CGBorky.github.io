@@ -6,6 +6,26 @@
 <title>Simple Calendar - Your Minimalist Event Manager</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  .features ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .devices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .device-frame {
+    width: 100%; 
+    max-width: 400px; 
+  }
+  .device-frame img {
+    width: 100%;
+    height: auto; 
+    display: block;
+  }
+</style>
 </head>
 <body>
 
@@ -26,9 +46,6 @@
       <div class="devices">
         <div class="device-frame" onclick="openFullscreen('screenshot1.png')">
           <img src="screenshot1.png" alt="White Mode">
-        </div>
-        <div class="device-frame" onclick="openFullscreen('screenshot2.png')">
-          <img src="screenshot2.png" alt="Dark Mode">
         </div>
       </div>
     </section>
